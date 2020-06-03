@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"kalend.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"www.kalend.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Kalend&#96;s Blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kalend&#96;s Blog">
-<meta property="og:url" content="https://kalend.top/index.html">
+<meta property="og:url" content="https://www.kalend.top/index.html">
 <meta property="og:site_name" content="Kalend&#96;s Blog">
 <meta property="og:description" content="Kalend&#96;s Blog">
 <meta property="og:locale" content="zh_CN">
@@ -31,7 +31,7 @@
 <meta property="article:tag" content="Java，Linux，Spring Boot，Spring Cloud">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://kalend.top/">
+<link rel="canonical" href="https://www.kalend.top/">
 
 
 <script id="page-configurations">
@@ -161,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kalend.top/2020/02/12/SpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel/">
+    <link itemprop="mainEntityOfPage" href="https://www.kalend.top/2020/02/12/SpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-12 09:59:22 / 修改时间：11:50:08" itemprop="dateCreated datePublished" datetime="2020-02-12T09:59:22+08:00">2020-02-12</time>
+              <time title="创建时间：2020-02-12 09:59:22" itemprop="dateCreated datePublished" datetime="2020-02-12T09:59:22+08:00">2020-02-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-03 23:15:45" itemprop="dateModified" datetime="2020-06-03T23:15:45+08:00">2020-06-03</time>
+              </span>
 
           
 
@@ -211,6 +217,21 @@
 <h3 id="引入spring-cloud-gateway-starter-ahas-sentinel"><a href="#引入spring-cloud-gateway-starter-ahas-sentinel" class="headerlink" title="引入spring-cloud-gateway-starter-ahas-sentinel"></a>引入spring-cloud-gateway-starter-ahas-sentinel</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.csp&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-gateway-starter-ahas-sentinel&lt;&#x2F;artifactId&gt;</span><br><span class="line">    &lt;version&gt;$&#123;ahas.sentinel.client.version&#125;&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
 
 <h3 id="JVM启动参数增加-1"><a href="#JVM启动参数增加-1" class="headerlink" title="JVM启动参数增加"></a>JVM启动参数增加</h3><figure class="highlight plain"><figcaption><span>OPTION</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;AHAS环境</span><br><span class="line">-Dahas.namespace&#x3D;xxx</span><br><span class="line">&#x2F;&#x2F;AHAS项目名称</span><br><span class="line">-Dahas.project.name&#x3D;xxxx</span><br><span class="line">&#x2F;&#x2F;Sentinel项目名称</span><br><span class="line">-Dproject.name&#x3D;xxxx</span><br><span class="line">&#x2F;&#x2F;网关应用分类</span><br><span class="line">-Dcsp.sentinel.app.type&#x3D;1</span><br></pre></td></tr></table></figure>
+<h3 id="关联业务TraceID"><a href="#关联业务TraceID" class="headerlink" title="关联业务TraceID"></a>关联业务TraceID</h3><ol>
+<li><p>登录 ARMS 控制台。</p>
+</li>
+<li><p>在左侧导航栏中选择应用监控 &gt; 应用列表，在应用列表页面单击目标应用的名称。</p>
+</li>
+<li><p>在左侧导航栏中单击应用设置，并在右侧单击自定义配置页签。</p>
+</li>
+<li><p>在自定义配置页签的业务日志关联设置区域，打开业务日志关联开关<br><img src="E:%5CHexo%5Csource%5C_posts%5CSpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel%5Cp94135.png" alt="sc_am_log_correlation"></p>
+</li>
+<li><p>在您业务日志的Layout的Pattern属性中添加<code>%X{EagleEye-TraceID}</code>配置。以Logback组件添加此配置为例，如下图所示。<br><img src="E:%5CHexo%5Csource%5C_posts%5CSpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel%5Cp94145.png" alt="dg_am__layout_pattern"></p>
+</li>
+<li><p>重启应用。<br>在应用的业务日志中成功打印出TraceId信息，则说明业务日志关联调用链的TraceId关联成功，如下图所示。<br><img src="E:%5CHexo%5Csource%5C_posts%5CSpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel%5Cp94151.png" alt="dg_am_log_traceid"></p>
+</li>
+</ol>
+
       
     </div>
 
@@ -229,7 +250,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kalend.top/2019/12/13/%E8%A7%A3%E5%86%B3%20spring%20boot%20%E5%8A%A0%E8%BD%BDlogback-spring.xml%20%E5%90%AF%E5%8A%A8%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E6%97%A5%E5%BF%97%E7%9B%AE%E5%BD%95%E7%AD%89%E9%85%8D%E7%BD%AE/">
+    <link itemprop="mainEntityOfPage" href="https://www.kalend.top/2019/12/13/%E8%A7%A3%E5%86%B3%20spring%20boot%20%E5%8A%A0%E8%BD%BDlogback-spring.xml%20%E5%90%AF%E5%8A%A8%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E6%97%A5%E5%BF%97%E7%9B%AE%E5%BD%95%E7%AD%89%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -296,7 +317,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kalend.top/2019/11/21/linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="https://www.kalend.top/2019/11/21/linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
