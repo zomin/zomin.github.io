@@ -230,11 +230,11 @@
 </li>
 <li><p>在左侧导航栏中单击应用设置，并在右侧单击自定义配置页签。</p>
 </li>
-<li><p>在自定义配置页签的业务日志关联设置区域，打开业务日志关联开关<br><img src="E:%5CHexo%5Csource%5C_posts%5CSpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel%5Cp94135.png" alt="sc_am_log_correlation"></p>
+<li><p>在自定义配置页签的业务日志关联设置区域，打开业务日志关联开关<br><img src="./p94135.png" alt="sc_am_log_correlation"></p>
 </li>
-<li><p>在您业务日志的Layout的Pattern属性中添加<code>%X{EagleEye-TraceID}</code>配置。以Logback组件添加此配置为例，如下图所示。<br><img src="E:%5CHexo%5Csource%5C_posts%5CSpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel%5Cp94145.png" alt="dg_am__layout_pattern"></p>
+<li><p>在您业务日志的Layout的Pattern属性中添加<code>%X{EagleEye-TraceID}</code>配置。以Logback组件添加此配置为例，如下图所示。<br><img src="./p94145.png" alt="dg_am__layout_pattern"></p>
 </li>
-<li><p>重启应用。<br>在应用的业务日志中成功打印出TraceId信息，则说明业务日志关联调用链的TraceId关联成功，如下图所示。<br><img src="E:%5CHexo%5Csource%5C_posts%5CSpringCloud%E9%9B%86%E6%88%90SpringCloudAlibaba-Sentinel%5Cp94151.png" alt="dg_am_log_traceid"></p>
+<li><p>重启应用。<br>在应用的业务日志中成功打印出TraceId信息，则说明业务日志关联调用链的TraceId关联成功，如下图所示。<br><img src="./p94151.png" alt="dg_am_log_traceid"></p>
 </li>
 </ol>
 
